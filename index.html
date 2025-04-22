@@ -113,7 +113,7 @@
 <!-- Panel Top #08 -->
 <nav class="panel top">
   <div class="sections desktop">
-    <div class="left"><a href="#" title="Slides Framework"><svg style="width:82px;height:24px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg></a></div>
+    <div class="left"><a href="#" title="Slides Framework"><img src="assets/svg/logo.svg" alt="Slides Framework Logo" style="width:2000;height:100px"></a></div>
     <div class="center">
       <ul class="menu uppercase">
         <li><a href="#">Home</a></li>
@@ -124,7 +124,7 @@
     </div>
     <div class="right">
       <ul class="menu trim">
-        <li><a href="http://facebook.com/Mobiart" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
+        <li><a href="http://facebook.com/MobiartCocinas" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
         <li><a href="http://twitter.com/Mobiart" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
         <li class="cropRight"><a href="http://instagram.com/Mobiart" class="trimRight" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#instagram"></use></svg></a></li>
       </ul>
@@ -181,11 +181,13 @@
             <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use></svg>
           </div>
           <p class="ae-3"><span class="opacity-8">Registrate y obten <b>un descuento </b> en tu primera compra</span></p>
-          <form class="slides-form" action="#" autocomplete="off">
-            <input type="email" class="input-9 ae-4 fromCenter" name="user-email" placeholder="Nombre" val=""/>
-            <input type="password" class="input-9 ae-5 fromCenter" name="user-password" placeholder="Celular" val=""/>
-            <input type="password" class="input-9 ae-6 fromCenter" name="confirm-password" placeholder="Ciudad" val=""/>
-            <button type="submit" class="button blue gradient ae-7 fromCenter" name="button">Get Started</button>
+          <form class="slides-form" action="https://formspree.io/f/xrbqggwr" method="POST" autocomplete="off">
+            <input type="text" class="input-9 ae-4 fromCenter" name="name" placeholder="Nombre" required />
+            <input type="email" class="input-9 ae-5 fromCenter" name="email" placeholder="Correo Electrónico" required />
+            <input type="text" class="input-9 ae-6 fromCenter" name="city" placeholder="Ciudad" required />
+            <input type="text" class="input-9 ae-6 fromCenter" name="service" placeholder="Servicio" required />
+            
+            <button type="submit" class="button blue gradient ae-7 fromCenter" name="button">Registrarse</button>
           </form>
         </div>
 
