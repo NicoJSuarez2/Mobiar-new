@@ -164,9 +164,6 @@
   </div>
 </nav>
 
-
-
-
 <!-- Slide 1 (#09) -->
 <section class="slide fade-6 kenBurns">
   <div class="content">
@@ -180,14 +177,15 @@
           <div class="button play small white popupTrigger ae-2 fromCenter margin-top-6 margin-bottom-6" data-popup-id="9">
             <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use></svg>
           </div>
-          <p class="ae-3"><span class="opacity-8">Registrate y obten <b>un descuento </b> en tu primera compra</span></p>
-          <form class="slides-form" action="https://formspree.io/f/xrbqggwr" method="POST" autocomplete="off">
-            <input type="text" class="input-9 ae-4 fromCenter" name="name" placeholder="Nombre" required />
-            <input type="email" class="input-9 ae-5 fromCenter" name="email" placeholder="Correo Electrónico" required />
-            <input type="text" class="input-9 ae-6 fromCenter" name="city" placeholder="Ciudad" required />
-            <input type="text" class="input-9 ae-6 fromCenter" name="service" placeholder="Servicio" required />
-            
-            <button type="submit" class="button blue gradient ae-7 fromCenter" name="button">Registrarse</button>
+          <p class="ae-3"><span class="opacity-8">Regístrate y obtén <b>un descuento</b> en tu primera compra</span></p>
+
+          <!-- FORMULARIO ACTUALIZADO -->
+          <form id="contactForm" class="slides-form" autocomplete="off">
+            <input type="text" class="input-9 ae-4 fromCenter" id="nombre" placeholder="Nombre" required />
+            <input type="email" class="input-9 ae-5 fromCenter" id="correo" placeholder="Correo Electrónico" required />
+            <input type="text" class="input-9 ae-6 fromCenter" id="celular" placeholder="Celular" required />
+            <input type="text" class="input-9 ae-6 fromCenter" id="servicio" placeholder="Servicio" required />
+            <button type="submit" class="button blue gradient ae-7 fromCenter">Registrarse</button>
           </form>
         </div>
 
@@ -196,6 +194,10 @@
   </div>
   <div class="background" style="background-image:url(assets/img/background/img-09.jpg)"></div>
 </section>
+
+<!-- Vinculación del JS -->
+<script src="/js/formulario.js"></script>
+
 
 <!-- Popup Video -->
 <div class="popup autoplay" data-popup-id="9">
