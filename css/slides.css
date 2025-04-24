@@ -1395,7 +1395,6 @@ p.uppercase, .p.uppercase,
   -ms-user-select: text;
   user-select: text;
 }
-
 .slide .background,
 .popup .background {
   position: absolute;
@@ -1465,6 +1464,9 @@ p.uppercase, .p.uppercase,
 
 .fix-11-12 {
   max-width: 1021px !important;
+  background-color: rgba(255, 255, 255, 0.3); /* Fondo blanco semi-transparente */
+  backdrop-filter: blur(6px); /* Aplica desenfoque al fondo que se ve detrás */
+  -webkit-backdrop-filter: blur(6px); /* Para compatibilidad en Safari */
 }
 
 .fix-12-12 {
@@ -7160,6 +7162,7 @@ p.remind-43 {
 .grid-73 > li:not(:last-child) {
   margin-bottom: 20px;
 }
+
 .grid-73 .cell-73 {
   padding: 20px 30px;
   position: relative;
@@ -7167,6 +7170,8 @@ p.remind-43 {
   transition: 0.25s;
   border: 1px solid rgba(255, 255, 255, 0.3);
   text: #fff;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  backdrop-filter: blur(10px);
 }
 .grid-73 .cell-73.rounded {
   border-radius: 6px;
