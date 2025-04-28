@@ -28,37 +28,31 @@ document.getElementById("contactForm").addEventListener("submit", async function
 });
 // Scripo para el registro del descuento YA FUNCIONA NO TOCAR NADA DE AQUÍ
 
-// Script para el formulario de documento sin descuento 
-document.getElementById("sugerir").addEventListener('submit', async function(e) {
-e.preventDefault(); // Evita que el formulario recargue la página
 
-const email = document.querySelector('input[name="correo"]').value;
+// Script para el formulario de documento sin descuento  YA FUNCIONA NO TOCAR NADA DE AQUÍ
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById("sugerir").addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = document.querySelector('input[name="correo"]').value;
 
-const formData = new FormData();
-formData.append('correo', email); // Este nombre 'correo' debe coincidir con el parámetro de tu endpoint
+    const formData = new FormData();
+    formData.append('correo', email);
 
-try {
-  const response = await fetch('https://backend-mobiart.onrender.com/enviardocumentonormal/', {
-    method: 'POST',
-    body: formData
+    try {
+      const response = await fetch('https://backend-mobiart.onrender.com/enviardocumentonormal/', {
+        method: 'POST',
+        body: formData
+      });
+      const result = await response.json();
+      alert(result.message);
+    } catch (error) {
+      alert("Error al enviar los datos");
+      console.error(error);
+    }
   });
-  const result = await response.json();
-  alert(result.message);
-} catch (error) {
-  alert("Error al enviar los datos");
-  console.error(error);
-}
 });
+// Script para el formulario de documento sin descuento  YA FUNCIONA NO TOCAR NADA DE AQUÍ
 
-
-  
-
-// Obtener todos los contactos
-async function obtenerContactos() {
-    const response = await fetch(`${API_URL}/contactos`);
-    const result = await response.json();
-    return result;
-}
 
 // Borrar un contacto por ID
 async function borrarContacto(id) {
