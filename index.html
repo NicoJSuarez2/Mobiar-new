@@ -9,6 +9,7 @@
   gtag('js', new Date());
 
   gtag('config', 'G-8563802T5Q');
+  
 </script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">
@@ -39,7 +40,16 @@
  
 </head>
 <body class="slides chain simplifiedMobile animated">
-		
+	
+<!-- Codigo para hidratar el backend de render  -->
+<script>
+  window.addEventListener('load', () => {
+    fetch('https://backend-pepe.onrender.com')
+      .then(response => console.log('Backend llamado para hidratarse'))
+      .catch(error => console.error('Error al llamar al backend:', error));
+  });
+</script>
+
 <!-- SVG Library -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
   
@@ -209,7 +219,7 @@
 </section>
 
 <!-- Vinculación del JS -->
-<script src="/js/formulario.js"></script>
+<script src="/js/apis.js"></script>
 
 
 <!-- Popup Video -->
@@ -306,7 +316,7 @@
                 <p class="opacity-8">Entregamos soluciones estéticas y funcionales gracias a nuestros amplios conocimientos, tanto en la parte conceptual de diseño como en los diferentes procesos productivos </p>
               </div>
               <div class="relative">
-                <a href="https://wa.me/+573229611895" class="button green gradient crop ae-3">Moderniza tu espacio</a></div>
+                <a href="https://backend-mobiart.onrender.com//view_newsletternormal" class="button green gradient crop ae-3">Moderniza tu espacio</a></div>
                 </div>
               </div>
             </li>
@@ -454,18 +464,18 @@
 </section>
 
 <!-- Slide 6 (#95) -->
-<section class="slide fade-6 kenBurns">
+<section class="slide fade-6 kenBurns" >
   <div class="content">
     <div class="container">
       <div class="wrap">
       
         <div class="fix-6-12">
-          <h1 class="huge ae-1 margin-bottom-2">Descarga Nuestro portafolio </h1>
-          <p class="hero ae-2 margin-bottom-3"><span class="opacity-8">Atrévete a transformar tus espacios y disfruta de un nuevo estilo de vida.</span></p>
+          <h1 class="huge ae-1 margin-bottom-2">¿Quieres decirle a alguien que es hora de cambiar muebes? </h1>
+          <p class="hero ae-2 margin-bottom-3"><span class="opacity-8">Enviale a su correo nuestro catalogo</span></p>
 
-          <form action="#" autocomplete="off" class="slides-form margin-bottom-3">
-            <input type="email" class="ae-3" name="email" placeholder="E-mail address"/>
-            <button type="submit" class="button blue gradient ae-4" name="submit">Descarga nuestro portafolio</button>
+          <form id="sugerir" autocomplete="off" class="slides-form margin-bottom-3">
+            <input type="email" class="ae-3" name="correo" placeholder="E-mail address"/>
+            <button type="submit" class="button green gradient ae-4" name="submit">Descarga nuestro portafolio</button>
           </form>
         </div>     
       </div>
@@ -473,6 +483,9 @@
   </div>
   <div class="background" style="background-image:url(assets/img/background/img-95.jpg)"></div>
 </section>
+
+<!-- Aquí agregas tu script, antes de cerrar el body -->
+<script src="js/apis.js"></script>
 
 <!-- Panel Bottom #15 -->
 <nav class="panel bottom lastSlideOnly">
