@@ -1,0 +1,57 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Hero Section */
+#home {
+    background-image: url('assets/images/background/img-09.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+/* Features Section */
+#features {
+    background-image: url('assets/images/background/img-14.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+}
+
+/* Slider Section */
+.relative {
+    background-image: url('assets/images/background/img-15.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Big Text Section */
+.big-text-section {
+    background-image: url('assets/images/background/img-85.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 2rem;
+}
+
+/* Subscribe Section */
+.subscribe-section {
+    background-image: url('assets/images/background/img-89.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+}
+
+/* Footer */
+footer {
+    background-image: url('assets/images/background/img-95.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+}
