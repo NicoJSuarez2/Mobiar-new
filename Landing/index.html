@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="icon" type="image/x-icon" href="assets/svg/MobiArt.ico">
     <link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700|Material+Icons"/>
+    <script src="assets/js/apis.js"></script>
      <!-- Google tag (gtag.js)Para las metricas papi -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8563802T5Q"></script>
     <script>
@@ -23,19 +24,19 @@
       gtag('config', 'G-8563802T5Q');
       
     </script>
+    <body class="bg-black muli">
+        <!-- Codigo para hidratar el backend de render  -->
+    <script>
+        window.addEventListener('load', () => {
+          fetch('https://backend-mobiart.onrender.com/hidratar')
+            .then(response => console.log('Backend llamado para hidratarse'))
+            .catch(error => console.error('Error al llamar al backend:', error));
+        });
+      </script>
     
 </head>
 
 <body class="bg-black muli">
-    <!-- Codigo para hidratar el backend de render  -->
-<script>
-    window.addEventListener('load', () => {
-      fetch('https://backend-mobiart.onrender.com/hidratar')
-        .then(response => console.log('Backend llamado para hidratarse'))
-        .catch(error => console.error('Error al llamar al backend:', error));
-    });
-  </script>
-
     <nav class="w-100pc flex flex-column md-flex-row md-px-10 py-5 bg-black">
         <div class="flex justify-between">
             <a href="https://mobiart.com.co/" class="flex items-center p-2 mr-4 no-underline">
@@ -50,10 +51,8 @@
             <div>
                 <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900">Transforma tu <br />Espacio Ideal</h1>
                 <form id="sugerir" autocomplete="off" class="slides-form margin-bottom-3 mt-10">
-                    <input type="email" class="input-lg half bw-0 fw-200 bg-green-lightest-10 white ph-green-lightest focus-white opacity-80 fs-s3 py-5 min-w-25vw br-r-0 ae-3" 
-                        name="correo" placeholder="E-mail address" required />
-                    <button type="submit" class="button-lg bg-green-lightest-20 green-lightest focus-white fw-300 fs-s3 mr-0 br-l-0 button green gradient ae-4" 
-                        name="submit">Comienza ahora</button>
+                    <input type="email" class="input-lg half bw-0 fw-200 bg-green-lightest-10 white ph-green-lightest focus-white opacity-80 fs-s3 py-5 min-w-25vw br-r-0 ae-3"  name="correo" placeholder="E-mail address" />
+                    <button type="submit" class="button-lg bg-green-lightest-20 green-lightest focus-white fw-300 fs-s3 mr-0 br-l-0 button green gradient ae-4" name="submit">Comienza ahora</button>
                 </form>
                 <div class="white opacity-90 fs-s3 mt-3">Sin compromiso, ¡es gratis!</div>
             </div>
@@ -429,7 +428,7 @@
     <footer class="p-5 md-p-l5 bg-green-lightest-10">
         <div class="flex flex-wrap">
             <div class="md-w-25pc mb-10">
-            <img src="assets/images/logo.png" class="w-l5" alt="">
+            <img src="assets\svg\logo.svg" class="w-20" alt="">
             <div class="white opacity-70 fs-s2 mt-4 md-pr-10">
                 <p>Todas las imagenes son propias estan registradas bajo el nobmre Mobiart. Prohibida su
                 uso sin la autolizacion pertinente</p>
@@ -503,5 +502,5 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/apis.js"></script>
 </body>
-
+<script src="assets/js/apis.js"></script>
 </html>

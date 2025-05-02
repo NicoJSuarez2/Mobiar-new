@@ -1,34 +1,6 @@
-const API_URL = "https://backend-mobiart.onrender.com"; // Cambia si tu FastAPI está en otro lado
 
 // Crear un nuevo contacto
 // Scripo para el registro del descuento
-
-// Scripo para el registro del descuento YA FUNCIONA NO TOCAR NADA DE AQUÍ
-document.getElementById("contactForm").addEventListener("submit", async function (e) {
-  e.preventDefault();
-
-  const formData = new FormData();
-  formData.append("nombre", document.getElementById("nombre").value);
-  formData.append("correo", document.getElementById("correo").value);
-  formData.append("celular", document.getElementById("celular").value);
-  formData.append("servicio", document.getElementById("servicio").value);
-
-  try {
-    const response = await fetch("https://backend-mobiart.onrender.com/enviardocumento/", {
-      method: "PUT",
-      body: formData, // No pongas Content-Type manualmente aquí
-    });
-
-    const result = await response.json();
-    alert(result.message);
-  } catch (error) {
-    alert("Error al enviar los datos");
-    console.error(error);
-  }
-});
-// Scripo para el registro del descuento YA FUNCIONA NO TOCAR NADA DE AQUÍ
-
-
 // Script para el formulario de documento sin descuento  YA FUNCIONA NO TOCAR NADA DE AQUÍ
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById("sugerir").addEventListener('submit', async function(e) {
@@ -56,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Borrar un contacto por ID
 async function borrarContacto(id) {
-    const response = await fetch(`${API_URL}/borrarcontacto/${id}`, {
+    const response = await fetch(`https://backend-mobiart.onrender.com/borrarcontacto/${id}`, {
         method: "DELETE",
     });
     const result = await response.json();
@@ -68,7 +40,7 @@ async function enviarDocumentoNormal(correo) {
   const formData = new FormData();
   formData.append('correo', correo);
 
-  const response = await fetch(`${API_BASE}/enviardocumentonormal/`, {
+  const response = await fetch(`https://backend-mobiart.onrender.com/enviardocumentonormal/`, {
       method: 'POST',
       body: formData
   });
@@ -82,7 +54,7 @@ async function enviarDocumentoNormal(correo) {
 }
 // Enviar solo el documento normal (sin guardar contacto)
 async function enviarDocumentoNormal(formData) {
-    const response = await fetch(`${API_URL}/enviardocumentonormal/`, {
+    const response = await fetch(`https://backend-mobiart.onrender.com/enviardocumentonormal/`, {
         method: "POST",
         body: formData,
     });
