@@ -3,26 +3,31 @@
 // Scripo para el registro del descuento
 // Script para el formulario de documento sin descuento  YA FUNCIONA NO TOCAR NADA DE AQUÍ
 document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById("sugerir").addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const email = document.querySelector('input[name="correo"]').value;
+  const formularios = document.querySelectorAll('.formulario-sugerencia');
 
-    const formData = new FormData();
-    formData.append('correo', email);
+  formularios.forEach(form => {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[name="correo"]').value;
 
-    try {
-      const response = await fetch('https://backend-mobiart.onrender.com/enviardocumentonormal/', {
-        method: 'POST',
-        body: formData
-      });
-      const result = await response.json();
-      alert(result.message);
-    } catch (error) {
-      alert("Error al enviar los datos");
-      console.error(error);
-    }
+      const formData = new FormData();
+      formData.append('correo', email);
+
+      try {
+        const response = await fetch('https://backend-mobiart.onrender.com/enviardocumentonormal/', {
+          method: 'POST',
+          body: formData
+        });
+        const result = await response.json();
+        alert(result.message);
+      } catch (error) {
+        alert("Error al enviar los datos");
+        console.error(error);
+      }
+    });
   });
 });
+
 // Script para el formulario de documento sin descuento  YA FUNCIONA NO TOCAR NADA DE AQUÍ
 
 
