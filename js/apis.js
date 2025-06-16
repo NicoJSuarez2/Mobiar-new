@@ -1,4 +1,4 @@
-const API_URL = "https://backend-mobiart.onrender.com"; // Cambia si tu FastAPI está en otro lado
+const API_URL = "https://n8n-xq3i.onrender.com"; // Cambia si tu FastAPI está en otro lado
 
 // Crear un nuevo contacto
 // Scripo para el registro del descuento
@@ -7,6 +7,7 @@ const API_URL = "https://backend-mobiart.onrender.com"; // Cambia si tu FastAPI 
 document.getElementById("contactForm").addEventListener("submit", async function (e) {
   e.preventDefault();
 
+  // Crear FormData desde el formulario
   const formData = new FormData();
   formData.append("nombre", document.getElementById("nombre").value);
   formData.append("correo", document.getElementById("correo").value);
@@ -14,18 +15,23 @@ document.getElementById("contactForm").addEventListener("submit", async function
   formData.append("servicio", document.getElementById("servicio").value);
 
   try {
-    const response = await fetch("https://backend-mobiart.onrender.com/enviardocumento/", {
-      method: "PUT",
-      body: formData, // No pongas Content-Type manualmente aquí
+    const response = await fetch("https://n8n-xq3i.onrender.com/webhook-test/82b2cfc4-92c4-4fea-9a3d-4509b8362339", {
+      method: "POST",
+      body: formData
     });
 
-    const result = await response.json();
-    alert(result.message);
+    if (response.ok) {
+      const result = await response.json(); // Asegúrate de que el webhook devuelve JSON
+      alert(result.message || "¡Formulario enviado correctamente!");
+    } else {
+      alert("Error al enviar los datos (código " + response.status + ")");
+    }
   } catch (error) {
-    alert("Error al enviar los datos");
+    alert("Error al conectar con el servidor");
     console.error(error);
   }
 });
+
 // Scripo para el registro del descuento YA FUNCIONA NO TOCAR NADA DE AQUÍ
 
 
@@ -39,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     formData.append('correo', email);
 
     try {
-      const response = await fetch('https://backend-mobiart.onrender.com/enviardocumentonormal/', {
+      const response = await fetch('https://n8n-xq3i.onrender.com/webhook-test/82b2cfc4-92c4-4fea-9a3d-4509b8362339', {
         method: 'POST',
         body: formData
       });
@@ -109,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// Ver un newsletter (descarga)
+// Ver un newsletter (descarga) 
 function verNewsletter() {
     window.open(`${API_URL}/view_newsletter/`, "_blank");
 }
